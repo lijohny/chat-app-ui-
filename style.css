@@ -1,0 +1,49 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.remChatEachHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatname {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.msgCount {
+  text-align: center;
+  font-size: 10px;
+  height: 13px;
+  width: 13px;
+  color: white;
+  background-color: blue;
+  border-radius: 100%;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9e9e9e;
+}
+
+.Chat {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(33, 36, 33);
+}
+
+.eachmessage {
+  line-height: 2;
+  padding-left: 40px;
+}
+.close {
+  display: none;
+}
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

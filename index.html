@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="h-screen w-full flex flex-col">
+
+        <!--Chat Tab Section -->
+        <header id="headerTabs" class="flex  bg-white justify-start
+         gap-2 border py-2.5">
+
+            <!-- First Section -->
+            <div onclick="showUnderlineOne()" class="relative cursor-pointer">
+                <h6 class="text-xs text-[#9f9f9f] font-semibold">My Customers</h6>
+                <div id="underlineOne" class="w-full h-0.5	 bg-[#ff9800] absolute bottom-[-10px]"></div>
+            </div>
+            <!-- Second Section -->
+            <div onclick="showUnderlineTwo()" class="relative cursor-pointer">
+                <h6 class="text-xs text-[#9f9f9f] font-semibold">My Convo's</h6>
+                <div id="underlineTwo" class="hidden w-full h-0.5	 bg-[#ff9800] absolute bottom-[-10px]"></div>
+            </div>
+            <!-- Third Section -->
+            <div onclick="showUnderlineThree()" class="relative cursor-pointer">
+                <h6 class="text-xs text-[#9f9f9f] font-semibold">All Convo's</h6>
+                <div id="underlineThree" class="hidden w-full h-0.5	 bg-[#ff9800] absolute bottom-[-10px]"></div>
+            </div>
+            <!-- Fourth Section -->
+            <div onclick="showUnderlineFour()" class="relative cursor-pointer">
+                <h6 class="text-xs text-[#9f9f9f] font-semibold">History</h6>
+                <div id="underlineFour" class="hidden w-full h-0.5	 bg-[#ff9800] absolute bottom-[-10px]"></div>
+            </div>
+
+        </header>
+
+        <!-- Search Bar / Remaining Chats -->
+        <div id="middleWhole" class="">
+            <!-- Search Bar -->
+            <div id="search" class="flex items-center justify-start gap-[15px] m-4 p-1.5 border">
+                <img class="w-[20px] h-[20px] " src="./Assects/icons8-search.svg" alt="search">
+                <input type="search" placeholder="Search" class="w-full outline-none">
+            </div>
+
+            <!-- Remaining Chats -->
+            <div id="remChat" class="grid-cols-3 max-h-[120px] overflow-y-scroll gap-2 p-2 hidden">
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Andrew Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon Kottaraakara Aluva</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Andrew Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Andrew Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Andrew Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Andrew Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Andrew Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Anton Mon</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+                <div class="remChatEachHead">
+                    <h6 class="chatname">Rakhesh Cook</h6>
+                    <h6 class="msgCount">8</h6>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact One -->
+        <div id="contacts" class="p-[5px] bg-white border items-center justify-between hidden">
+            <!-- Contact -->
+            <div class="gap-[5px] flex items-center" onclick="chatoneOpen()">
+                <img id="ContactIcon" class="w-[50px] h-[50px]" src="./Assects/icons8-contacts.svg"
+                    alt="profile Picture">
+
+                <div>
+                    <h5 id="contactName" class="text-sm font-bold">Andrew Cook</h5>
+                    <h6 id="responceChat" class="text-xs font-light-thin text-[Grey]">Responce 1</h6>
+                </div>
+            </div>
+
+            <!-- Chat Close Buuton -->
+            <div>
+                <img id="closeButton" onclick="chatoneClose()" class="w-[20px] h-[20px] hidden"
+                    src="./Assects/icons8-close-button-32.png" alt="close Button">
+            </div>
+
+        </div>
+
+        <!-- Contact One Chats -->
+        <div id="chatOne" class="overflow-y-auto mb-[141px] hidden">
+
+            <div id="chat-1">
+
+                <div id="chatHeader" class="flex sticky top-0 item-center text-[12px] justify-between  
+                bg-[#808080] w-[full]">
+
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianOne()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+
+                </div>
+
+                <div id="messages" class="">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="chat-2">
+                <div id="chatHeader" class="flex sticky  top-0 item-center text-[12px] justify-between 
+                                                                bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianTwo()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesTWo" class=" bg-neutral-200">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-3">
+                <div id="chatHeader" class="flex sticky top-0 item-center text-[12px] justify-between  
+                                                            bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianthree()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesthree" class="">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-4">
+                <div id="chatHeader" class="flex sticky  top-0 item-center text-[12px] 
+                                                            justify-between  bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianFour()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesFour" class=" bg-neutral-200">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-5">
+                <div id="chatHeader" class="flex sticky top-0 item-center text-[12px] justify-between  
+                                                        bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianOneFive()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesFive" class="">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-6">
+                <div id="chatHeader" class="flex sticky  top-0 item-center text-[12px] justify-between  
+                                                            bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianSix()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesSix" class=" bg-neutral-200">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-7">
+                <div id="chatHeader" class="flex sticky top-0 item-center text-[12px] 
+                                                             justify-between bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianSeven()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesSeven" class="">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-8">
+                <div id="chatHeader" class="flex sticky bg-[#] top-0 item-center text-[12px] 
+                                                         justify-between  bg-[#808080] w-[full] h-[fit-content]">
+                    <div class="block">
+                        <h6>To: (435)691-1100</h6>
+                        <h6>From: (385)453-1041: Volt Tester Number</h6>
+                    </div>
+                    <div class="flex justify-between items-end flex-col">
+                        <h6>Duration:0:6.27</h6>
+                        <img onclick="accordianEight()" class="w-[10px] h-[10px] cursor-pointer"
+                            src="./Assects/drop down .png" alt="">
+                    </div>
+                </div>
+
+                <div id="messagesEight" class=" bg-neutral-200">
+
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                    <div class="eachmessage">
+                        <p class="date">Dec 30th, 1:31pm</p>
+                        <p class="Chat">Responce</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- bottom section -->
+        <div id="bottom" class="bg-[white] z-50 fixed bottom-0 flex-col justify-between w-full shadow hidden">
+
+            <input id="resolveButton" type="submit" value="Resolve"
+                class="shadow border ml-[8px] w-[95%] h-[35px] cursor-pointer">
+
+            <div class="flex flex-col">
+
+                <label class="w-[fit-content] p-[5px] text-[10px] text-[#9e9e9e] font-semibold" for="">0/160
+                    Character</label>
+                <div class="flex justify-between border border-[1px p-[7px] ">
+                    <input id="inputMessage" placeholder="Send Message..." type="search"
+                        class="black] w-full outline-none">
+                    <img class="w-[25px]  h-[25px] cursor-pointer" src="./Assects/send button .png" alt="send button">
+                </div>
+
+            </div>
+
+            <!-- vote section -->
+            <div id="voteSection" class="flex">
+                <img class="w-[40px] h-[40px]" src="./Assects/icons8-add-64.png" alt="">
+                <div class="bg-[#f3f3f3]">
+                    <h6 class="text-[12px]">Volt Test Number</h6>
+                    <h6 class="text-[12px]">(385) 435.1041</h6>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
